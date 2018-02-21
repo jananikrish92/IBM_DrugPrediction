@@ -41,4 +41,4 @@ def calPscIdx():
     #p.savetxt("foo.csv", g, delimiter=",")
   #  fd.write(g)
     #print g[0]
-#np.savetxt("psc.csv", psc_array.T[:3], delimiter=",", header=','.join(dict_prot.keys()))
+np.savetxt("psc.csv", psc_array.T, delimiter=",", header=','.join(dict_prot.keys()))
