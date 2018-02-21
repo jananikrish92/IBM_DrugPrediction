@@ -5,12 +5,12 @@ countp = 0
 countn = 0
 count = 0
 with open('../BindingDB_All.tsv') as tsvfile:
-	reader = csv.DictReader(tsvfile, dialect='excel-tab')
-	for row in reader:
-		count = count +1
-		# import pdb
-		# pdb.set_trace()
+    reader = csv.DictReader(tsvfile, dialect='excel-tab')
+    import pdb
+    pdb.set_trace()
+    for row in reader:
 		try:
+            
 			if(row['IC50 (nM)'] == '' or row['Ligand SMILES']=='' or row['Ligand SMILES'] is None):
 				continue
 			else:
