@@ -13,13 +13,16 @@ def convToArr(fp):
 count = 0
 countp  = 0
 countn = 0
+pubids = list()
 with open('../BindingDB_All.tsv') as tsvfile,open('../newData.csv','w') as newfile:
 	reader = csv.DictReader(tsvfile,dialect='excel-tab')
 	writer = csv.writer(newfile,delimiter=',')
-	writer.writerow(["PubChem CID", "fingerprintR1", "fingerprintR2","fingerprintR3"])
+	writer.writerow(["PubChem CID", "fingerprintR1", "fingerprintR2","fingerprintR3","protienId"])
 	for row in reader:
 		pid = row['PubChem CID']
-		if pid!='':
+		proId = row['UniProt (SwissProt) Primary ID of Target Chain']
+		if pid!='' and pid not in pubids:
+			pubids.append(pid)
 			try:
 				if(row['IC50 (nM)']=='' or row['Ligand SMILES']=='' or row['Ligand SMILES'] is None):
 					continue
@@ -29,14 +32,14 @@ with open('../BindingDB_All.tsv') as tsvfile,open('../newData.csv','w') as newfi
 						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
 						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
 						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
-						out = pid,fp1.tolist(),fp2.tolist(),fp3.tolist()
+						out = pid,fp1.tolist(),fp2.tolist(),fp3.tolist(),proId
 						writer.writerow(out)
 						countp += 1
 					elif float(row['IC50 (nM)'])>1000 and _CalcMolWt(md)<100 and md is not None:
 						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
 						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
 						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
-						out = pid,fp1.tolist(),fp2.tolist(),fp3.tolist()
+						out = pid,fp1.tolist(),fp2.tolist(),fp3.tolist(),proId
 						writer.writerow(out)						
 						countn += 1
 			except ValueError:
@@ -48,14 +51,14 @@ with open('../BindingDB_All.tsv') as tsvfile,open('../newData.csv','w') as newfi
 						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
 						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
 						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
-						out = pid,fp1.tolist(),fp2.tolist(),fp3.tolist()
+						out = pid,fp1.tolist(),fp2.tolist(),fp3.tolist(),proId
 						writer.writerow(out)
 					elif str[0]=='<' and float(str[1:])<100 and _CalcMolWt(md)<1000 and md is not None:
 						countp += 1
 						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
 						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
 						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
-						out = pid,fp1.tolist(),fp2.tolist(),fp3.tolist()
+						out = pid,fp1.tolist(),fp2.tolist(),fp3.tolist(),proId
 						writer.writerow(out)
 				except TypeError:
 					continue
