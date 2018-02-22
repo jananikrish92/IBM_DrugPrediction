@@ -18,6 +18,7 @@ pubids = list()
 psc_array,prot_id2idx = calPscIdx()
 
 
+# def featureGen(ic50_range):
 with open('../BindingDB_All.tsv') as tsvfile,open('../newData.csv','w') as newfile:
 	next(tsvfile)
 	reader = csv.reader(tsvfile,delimiter='\t')
@@ -29,27 +30,30 @@ with open('../BindingDB_All.tsv') as tsvfile,open('../newData.csv','w') as newfi
 		# import pdb
 		# pdb.set_trace()
 	
-		if pid!='' and pid not in pubids and row[41]!='':
+		if pid!='' and pid not in pubids and row[41]!='' and row[37]!='':
 			pubids.append(pid)
 			# import pdb
 			# pdb.set_trace()
-			pd = psc_array[prot_id2idx[row[41].split(',')[0]]]
+			proId = row[41].split(',')[0]
+			if proId not in prot_id2idx:
+				print proId,pid,row[37]
+			pd = psc_array[prot_id2idx[proId]]
 			try:
 				if(row[9]=='' or row[1]=='' or row[1] is None):
 					continue
 				else:
 					md = Chem.MolFromSmiles(row[1])
 					if float(row[9])<100 and _CalcMolWt(md)<1000 and md is not None:
-						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
-						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
-						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
+						fp1 = convToArr(AllChem.GetMorganFingerprint(md,1))
+						fp2 = convToArr(AllChem.GetMorganFingerprint(md,2))
+						fp3 = convToArr(AllChem.GetMorganFingerprint(md,3))
 						out = pid,proId,fp1.tolist(),fp2.tolist(),fp3.tolist(),pd,1
 						writer.writerow(out)
 						countp += 1
 					elif float(row[9])>1000 and _CalcMolWt(md)<100 and md is not None:
-						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
-						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
-						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
+						fp1 = convToArr(AllChem.GetMorganFingerprint(md,1))
+						fp2 = convToArr(AllChem.GetMorganFingerprint(md,2))
+						fp3 = convToArr(AllChem.GetMorganFingerprint(md,3))
 						out = pid,proId,fp1.tolist(),fp2.tolist(),fp3.tolist(),pd,0
 						writer.writerow(out)						
 						countn += 1
@@ -59,16 +63,16 @@ with open('../BindingDB_All.tsv') as tsvfile,open('../newData.csv','w') as newfi
 					md = Chem.MolFromSmiles(row[1])
 					if str[0]=='>' and float(str[1:])>1000 and _CalcMolWt(md)<1000 and md is not None:
 						countn += 1
-						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
-						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
-						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
+						fp1 = convToArr(AllChem.GetMorganFingerprint(md,1))
+						fp2 = convToArr(AllChem.GetMorganFingerprint(md,2))
+						fp3 = convToArr(AllChem.GetMorganFingerprint(md,3))
 						out = pid,proId,fp1.tolist(),fp2.tolist(),fp3.tolist(),pd,0
 						writer.writerow(out)
 					elif str[0]=='<' and float(str[1:])<100 and _CalcMolWt(md)<1000 and md is not None:
 						countp += 1
-						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
-						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
-						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
+						fp1 = convToArr(AllChem.GetMorganFingerprint(md,1))
+						fp2 = convToArr(AllChem.GetMorganFingerprint(md,2))
+						fp3 = convToArr(AllChem.GetMorganFingerprint(md,3))
 						out = pid,proId,fp1.tolist(),fp2.tolist(),fp3.tolist(),pd,1
 						writer.writerow(out)
 				except TypeError:
@@ -79,3 +83,5 @@ with open('../BindingDB_All.tsv') as tsvfile,open('../newData.csv','w') as newfi
 				continue
 
 print countn,countp
+
+# featureGen([100,1000])
