@@ -42,7 +42,6 @@ with open('../BindingDB_All.tsv') as tsvfile,open('../newData.csv','w') as newfi
 				if(row[9]=='' or row[1]=='' or row[1] is None):
 					continue
 				else:
-					print "no < symbol"
 					md = Chem.MolFromSmiles(row[1])
 					if float(row[9])<100 and _CalcMolWt(md)<1000 and md is not None:
 						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
@@ -50,33 +49,36 @@ with open('../BindingDB_All.tsv') as tsvfile,open('../newData.csv','w') as newfi
 						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
 						out = pid,proId,fp1.tolist(),fp2.tolist(),fp3.tolist(),pd,1
 						writer.writerow(out)
+						print "writing done"
 						countp += 1
-					elif float(row[9])>1000 and _CalcMolWt(md)<100 and md is not None:
+					elif float(row[9])>1000 and _CalcMolWt(md)<100 and md is not None:					
 						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
 						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
 						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
 						out = pid,proId,fp1.tolist(),fp2.tolist(),fp3.tolist(),pd,0
-						writer.writerow(out)						
+						writer.writerow(out)	
+						print "writing done"					
 						countn += 1
 			except ValueError:
 				try:
 					str = row[9]
 					md = Chem.MolFromSmiles(row[1])
-					print "< symbol"
 					if str[0]=='>' and float(str[1:])>1000 and _CalcMolWt(md)<1000 and md is not None:
 						countn += 1
-						fp1 = convToArr(AllChem.GetMorganFingerprint(md,1))
-						fp2 = convToArr(AllChem.GetMorganFingerprint(md,2))
-						fp3 = convToArr(AllChem.GetMorganFingerprint(md,3))
+						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
+						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
+						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
 						out = pid,proId,fp1.tolist(),fp2.tolist(),fp3.tolist(),pd,0
 						writer.writerow(out)
+						print "writing done"
 					elif str[0]=='<' and float(str[1:])<100 and _CalcMolWt(md)<1000 and md is not None:
 						countp += 1
-						fp1 = convToArr(AllChem.GetMorganFingerprint(md,1))
-						fp2 = convToArr(AllChem.GetMorganFingerprint(md,2))
-						fp3 = convToArr(AllChem.GetMorganFingerprint(md,3))
+						fp1 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,1))
+						fp2 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,2))
+						fp3 = convToArr(AllChem.GetMorganFingerprintAsBitVect(md,3))
 						out = pid,proId,fp1.tolist(),fp2.tolist(),fp3.tolist(),pd,1
 						writer.writerow(out)
+						print "writing done"
 				except TypeError:
 					continue
 			except TypeError:
