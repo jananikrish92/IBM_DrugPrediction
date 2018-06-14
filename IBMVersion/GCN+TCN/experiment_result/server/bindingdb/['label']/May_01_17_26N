@@ -1,0 +1,257 @@
+ learning_rate: 0.0005,
+ batch_size: 64, 
+ tasks: ['label'],
+ random_state: 1 
+, EAGCN_structure: concate
+Epoch: [1/50], Step: [706/705.0], Loss: 0.458026051521, 
+Train AUC seperate: [0.9400413596937747], 
+Train AUC total: 0.940041359694, 
+Validation AUC seperate: [0.9398586625517436], 
+Validation AUC total: 0.939858662552 
+Epoch: [2/50], Step: [706/705.0], Loss: 0.133556485176, 
+Train AUC seperate: [0.9546615916515362], 
+Train AUC total: 0.954661591652, 
+Validation AUC seperate: [0.9532845546800427], 
+Validation AUC total: 0.95328455468 
+Epoch: [3/50], Step: [706/705.0], Loss: 0.491043418646, 
+Train AUC seperate: [0.9618162179978073], 
+Train AUC total: 0.961816217998, 
+Validation AUC seperate: [0.9600995590853046], 
+Validation AUC total: 0.960099559085 
+Epoch: [4/50], Step: [706/705.0], Loss: 0.173319637775, 
+Train AUC seperate: [0.962949353120844], 
+Train AUC total: 0.962949353121, 
+Validation AUC seperate: [0.9593254210736148], 
+Validation AUC total: 0.959325421074 
+Epoch: [5/50], Step: [706/705.0], Loss: 0.312503635883, 
+Train AUC seperate: [0.9673654830731145], 
+Train AUC total: 0.967365483073, 
+Validation AUC seperate: [0.9641171451700182], 
+Validation AUC total: 0.96411714517 
+Epoch: [6/50], Step: [706/705.0], Loss: 0.140860572457, 
+Train AUC seperate: [0.9701546907381168], 
+Train AUC total: 0.970154690738, 
+Validation AUC seperate: [0.9660301118238919], 
+Validation AUC total: 0.966030111824 
+Epoch: [7/50], Step: [706/705.0], Loss: 0.315403729677, 
+Train AUC seperate: [0.9724365742714822], 
+Train AUC total: 0.972436574271, 
+Validation AUC seperate: [0.9677859037763852], 
+Validation AUC total: 0.967785903776 
+Epoch: [8/50], Step: [706/705.0], Loss: 0.192199915648, 
+Train AUC seperate: [0.9733376033586454], 
+Train AUC total: 0.973337603359, 
+Validation AUC seperate: [0.9696632592723766], 
+Validation AUC total: 0.969663259272 
+Epoch: [9/50], Step: [706/705.0], Loss: 0.117252603173, 
+Train AUC seperate: [0.9747025852268878], 
+Train AUC total: 0.974702585227, 
+Validation AUC seperate: [0.9704931611199321], 
+Validation AUC total: 0.97049316112 
+Epoch: [10/50], Step: [706/705.0], Loss: 0.526107430458, 
+Train AUC seperate: [0.977818576920587], 
+Train AUC total: 0.977818576921, 
+Validation AUC seperate: [0.9730155641802902], 
+Validation AUC total: 0.97301556418 
+Epoch: [11/50], Step: [706/705.0], Loss: 0.120070815086, 
+Train AUC seperate: [0.9777060088689534], 
+Train AUC total: 0.977706008869, 
+Validation AUC seperate: [0.9709546493523059], 
+Validation AUC total: 0.970954649352 
+Epoch: [12/50], Step: [706/705.0], Loss: 0.160635769367, 
+Train AUC seperate: [0.9783438399773521], 
+Train AUC total: 0.978343839977, 
+Validation AUC seperate: [0.9731125236510695], 
+Validation AUC total: 0.973112523651 
+Epoch: [13/50], Step: [706/705.0], Loss: 0.103021971881, 
+Train AUC seperate: [0.9814293899493736], 
+Train AUC total: 0.981429389949, 
+Validation AUC seperate: [0.9759010391821478], 
+Validation AUC total: 0.975901039182 
+Epoch: [14/50], Step: [706/705.0], Loss: 0.257964611053, 
+Train AUC seperate: [0.9825704793122827], 
+Train AUC total: 0.982570479312, 
+Validation AUC seperate: [0.9777989520283712], 
+Validation AUC total: 0.977798952028 
+Epoch: [15/50], Step: [706/705.0], Loss: 0.119801677763, 
+Train AUC seperate: [0.9834354450566347], 
+Train AUC total: 0.983435445057, 
+Validation AUC seperate: [0.9781524737048021], 
+Validation AUC total: 0.978152473705 
+Epoch: [16/50], Step: [706/705.0], Loss: 0.141693636775, 
+Train AUC seperate: [0.9840061178875154], 
+Train AUC total: 0.984006117888, 
+Validation AUC seperate: [0.9788135462902158], 
+Validation AUC total: 0.97881354629 
+Epoch: [17/50], Step: [706/705.0], Loss: 0.231164351106, 
+Train AUC seperate: [0.9844661234668122], 
+Train AUC total: 0.984466123467, 
+Validation AUC seperate: [0.9791363128757482], 
+Validation AUC total: 0.979136312876 
+Epoch: [18/50], Step: [706/705.0], Loss: 0.374002039433, 
+Train AUC seperate: [0.9223576473889135], 
+Train AUC total: 0.922357647389, 
+Validation AUC seperate: [0.919407660186677], 
+Validation AUC total: 0.919407660187 
+Epoch: [19/50], Step: [706/705.0], Loss: 0.177665948868, 
+Train AUC seperate: [0.9410845000123582], 
+Train AUC total: 0.941084500012, 
+Validation AUC seperate: [0.935878872855055], 
+Validation AUC total: 0.935878872855 
+Epoch: [20/50], Step: [706/705.0], Loss: 0.368882268667, 
+Train AUC seperate: [0.9459967856493833], 
+Train AUC total: 0.945996785649, 
+Validation AUC seperate: [0.9403986572003574], 
+Validation AUC total: 0.9403986572 
+Epoch: [21/50], Step: [706/705.0], Loss: 0.195357382298, 
+Train AUC seperate: [0.9474740274122732], 
+Train AUC total: 0.947474027412, 
+Validation AUC seperate: [0.9433936365127029], 
+Validation AUC total: 0.943393636513 
+Epoch: [22/50], Step: [706/705.0], Loss: 0.30090495944, 
+Train AUC seperate: [0.9515984184641507], 
+Train AUC total: 0.951598418464, 
+Validation AUC seperate: [0.9458032169501341], 
+Validation AUC total: 0.94580321695 
+Epoch: [23/50], Step: [706/705.0], Loss: 0.293563753366, 
+Train AUC seperate: [0.9536402137981601], 
+Train AUC total: 0.953640213798, 
+Validation AUC seperate: [0.9484583525080534], 
+Validation AUC total: 0.948458352508 
+Epoch: [24/50], Step: [706/705.0], Loss: 0.288392901421, 
+Train AUC seperate: [0.9581730933627189], 
+Train AUC total: 0.958173093363, 
+Validation AUC seperate: [0.9538909155774375], 
+Validation AUC total: 0.953890915577 
+Epoch: [25/50], Step: [706/705.0], Loss: 0.193669617176, 
+Train AUC seperate: [0.9572814326468395], 
+Train AUC total: 0.957281432647, 
+Validation AUC seperate: [0.9504947441977688], 
+Validation AUC total: 0.950494744198 
+Epoch: [26/50], Step: [706/705.0], Loss: 0.254464358091, 
+Train AUC seperate: [0.9585150648436496], 
+Train AUC total: 0.958515064844, 
+Validation AUC seperate: [0.9525187529166751], 
+Validation AUC total: 0.952518752917 
+Epoch: [27/50], Step: [706/705.0], Loss: 0.517107129097, 
+Train AUC seperate: [0.9617771329214436], 
+Train AUC total: 0.961777132921, 
+Validation AUC seperate: [0.9568652566051009], 
+Validation AUC total: 0.956865256605 
+Epoch: [28/50], Step: [706/705.0], Loss: 0.204029038548, 
+Train AUC seperate: [0.9622805128431136], 
+Train AUC total: 0.962280512843, 
+Validation AUC seperate: [0.9554916371242437], 
+Validation AUC total: 0.955491637124 
+Epoch: [29/50], Step: [706/705.0], Loss: 0.22322909534, 
+Train AUC seperate: [0.9644656739764668], 
+Train AUC total: 0.964465673976, 
+Validation AUC seperate: [0.9573670501934415], 
+Validation AUC total: 0.957367050193 
+Epoch: [30/50], Step: [706/705.0], Loss: 0.261731624603, 
+Train AUC seperate: [0.9648072844450061], 
+Train AUC total: 0.964807284445, 
+Validation AUC seperate: [0.9573804043776473], 
+Validation AUC total: 0.957380404378 
+Epoch: [31/50], Step: [706/705.0], Loss: 0.37792339921, 
+Train AUC seperate: [0.9653733239511066], 
+Train AUC total: 0.965373323951, 
+Validation AUC seperate: [0.9573634081432034], 
+Validation AUC total: 0.957363408143 
+Epoch: [32/50], Step: [706/705.0], Loss: 0.415700554848, 
+Train AUC seperate: [0.9670089175166706], 
+Train AUC total: 0.967008917517, 
+Validation AUC seperate: [0.9575408973914665], 
+Validation AUC total: 0.957540897391 
+Epoch: [33/50], Step: [706/705.0], Loss: 0.20047980547, 
+Train AUC seperate: [0.9663267696440485], 
+Train AUC total: 0.966326769644, 
+Validation AUC seperate: [0.9576132527895272], 
+Validation AUC total: 0.95761325279 
+Epoch: [34/50], Step: [706/705.0], Loss: 0.5914041996, 
+Train AUC seperate: [0.9685483242171787], 
+Train AUC total: 0.968548324217, 
+Validation AUC seperate: [0.9594789537247572], 
+Validation AUC total: 0.959478953725 
+Epoch: [35/50], Step: [706/705.0], Loss: 0.642594695091, 
+Train AUC seperate: [0.9689524676166299], 
+Train AUC total: 0.968952467617, 
+Validation AUC seperate: [0.9610981283261024], 
+Validation AUC total: 0.961098128326 
+Epoch: [36/50], Step: [706/705.0], Loss: 0.356639802456, 
+Train AUC seperate: [0.9700247691599009], 
+Train AUC total: 0.97002476916, 
+Validation AUC seperate: [0.9614104543676195], 
+Validation AUC total: 0.961410454368 
+Epoch: [37/50], Step: [706/705.0], Loss: 0.51656126976, 
+Train AUC seperate: [0.9709557872073451], 
+Train AUC total: 0.970955787207, 
+Validation AUC seperate: [0.9625636893418557], 
+Validation AUC total: 0.962563689342 
+Epoch: [38/50], Step: [706/705.0], Loss: 0.652288019657, 
+Train AUC seperate: [0.9706674071183728], 
+Train AUC total: 0.970667407118, 
+Validation AUC seperate: [0.9607149846410695], 
+Validation AUC total: 0.960714984641 
+Epoch: [39/50], Step: [706/705.0], Loss: 0.193804264069, 
+Train AUC seperate: [0.9702254092759586], 
+Train AUC total: 0.970225409276, 
+Validation AUC seperate: [0.9632594018717547], 
+Validation AUC total: 0.963259401872 
+Epoch: [40/50], Step: [706/705.0], Loss: 0.3670963943, 
+Train AUC seperate: [0.9729936642604546], 
+Train AUC total: 0.97299366426, 
+Validation AUC seperate: [0.9632339075200892], 
+Validation AUC total: 0.96323390752 
+Epoch: [41/50], Step: [706/705.0], Loss: 0.234461143613, 
+Train AUC seperate: [0.9723036758369452], 
+Train AUC total: 0.972303675837, 
+Validation AUC seperate: [0.963249932541136], 
+Validation AUC total: 0.963249932541 
+Epoch: [42/50], Step: [706/705.0], Loss: 0.289285451174, 
+Train AUC seperate: [0.9725215039324661], 
+Train AUC total: 0.972521503932, 
+Validation AUC seperate: [0.9639522816959132], 
+Validation AUC total: 0.963952281696 
+Epoch: [43/50], Step: [706/705.0], Loss: 0.414639800787, 
+Train AUC seperate: [0.9738149365354576], 
+Train AUC total: 0.973814936535, 
+Validation AUC seperate: [0.9634390763501607], 
+Validation AUC total: 0.96343907635 
+Epoch: [44/50], Step: [706/705.0], Loss: 0.196292504668, 
+Train AUC seperate: [0.9734004723701539], 
+Train AUC total: 0.97340047237, 
+Validation AUC seperate: [0.9652265946069492], 
+Validation AUC total: 0.965226594607 
+Epoch: [45/50], Step: [706/705.0], Loss: 0.186681330204, 
+Train AUC seperate: [0.9734590571020121], 
+Train AUC total: 0.973459057102, 
+Validation AUC seperate: [0.9644632208770736], 
+Validation AUC total: 0.964463220877 
+Epoch: [46/50], Step: [706/705.0], Loss: 0.123950123787, 
+Train AUC seperate: [0.9755684425322286], 
+Train AUC total: 0.975568442532, 
+Validation AUC seperate: [0.9644925191478766], 
+Validation AUC total: 0.964492519148 
+Epoch: [47/50], Step: [706/705.0], Loss: 0.0799667313695, 
+Train AUC seperate: [0.9750645500128536], 
+Train AUC total: 0.975064550013, 
+Validation AUC seperate: [0.9646131114779779], 
+Validation AUC total: 0.964613111478 
+Epoch: [48/50], Step: [706/705.0], Loss: 0.1466293782, 
+Train AUC seperate: [0.9748282055718325], 
+Train AUC total: 0.974828205572, 
+Validation AUC seperate: [0.9648878030003695], 
+Validation AUC total: 0.964887803 
+Epoch: [49/50], Step: [706/705.0], Loss: 0.413132548332, 
+Train AUC seperate: [0.9747001518836972], 
+Train AUC total: 0.974700151884, 
+Validation AUC seperate: [0.965258968386842], 
+Validation AUC total: 0.965258968387 
+Epoch: [50/50], Step: [706/705.0], Loss: 0.391855120659, 
+Train AUC seperate: [0.9757807856328525], 
+Train AUC total: 0.975780785633, 
+Validation AUC seperate: [0.9658407252115182], 
+Validation AUC total: 0.965840725212 
+AUC of the model on the test set for single task: [0.9328982730845805]
+AUC of the model on the test set for all tasks: 0.932898273085

@@ -1,0 +1,9 @@
+ learning_rate: 0.0005,
+ batch_size: 64, 
+ tasks: ['label'],
+ random_state: 1 
+, EAGCN_structure: concate
+early_stop_step_single: 3, early_stop_step_multi: 5, 
+early_stop_required_progress: 0.001,
+ early_stop_diff: 0.11, 
+weight_decay: 1e-05

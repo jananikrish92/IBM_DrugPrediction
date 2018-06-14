@@ -1,0 +1,10 @@
+ learning_rate: 0.0005,
+ batch_size: 256, 
+ tasks: ['NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', 'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'],
+ random_state: 2 
+, EAGCN_structure: concate
+early_stop_step_single: 3, early_stop_step_multi: 5, 
+early_stop_required_progress: 0.001,
+ early_stop_diff: 0.11, 
+weight_decay: 0.0001, dropout: 0.3
+n_sgc1_1, n_sgc1_2, n_sgc1_3, n_sgc1_4, n_sgc1_5, n_sgc2_1, n_sgc2_2, n_sgc2_3, n_sgc2_4, n_sgc2_5: 30, 10 10, 10, 10, / 60, 20, 20, 20, 20

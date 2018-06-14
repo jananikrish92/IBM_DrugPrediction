@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "models_tgcn.py", line 4, in <module>
+    from utils import *
+  File "/home/sanskrutirah/IBMVersion/GCN+TCN/eagcn/utils.py", line 5, in <module>
+    from rdkit.Chem import MolFromSmiles, SDMolSupplier
+ImportError: No module named rdkit.Chem
+srun: error: node100: task 0: Exited with exit code 1

@@ -1,0 +1,10 @@
+ learning_rate: 0.0005,
+ batch_size: 64, 
+ tasks: ['label'],
+ random_state: 1 
+, EAGCN_structure: concate
+Epoch: [1/50], Step: [1/0.0], Loss: 158.888900757, 
+Train AUC seperate: [0.5882352941176471], 
+Train AUC total: 0.588235294118, 
+Validation AUC seperate: [1.0], 
+Validation AUC total: 1.0 
